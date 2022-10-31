@@ -1,0 +1,114 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Benchmarking SSL on Video Representation Learning and KD</title>
+
+  <link rel="stylesheet" href="template.css">
+</head>
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;">Benchmarking SSL on Video Representation Learning and KD</span></center><br/>
+
+  <table align=center width=600px>
+    <tr>
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="." target="_top">[Home]</a>
+          </span>
+        </center>
+      </td>
+      
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="." target="_top">[Paper]</a>
+          </span>
+        </center>
+      </td>
+
+      <td align=center width=150px>
+        <center>
+          <span style="font-size: 22px">
+            <a href="./code/code.zip" target="_top">[Code]</a>
+          </span>
+        </center>
+      </td>
+
+      
+    </tr>
+  </table>
+
+  <br>
+  <br>
+
+
+  <table align=center width=800px>
+    <center><img src="./table1_1.jpg" width=400px /></center> <br>
+    <center> Performance of different dataset subset sizes. </center>
+  </table>
+
+  <br>
+
+  <br>
+
+  <center>
+    <h2>Abstract</h2>
+  </center>
+  <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  Self-supervised learning has become the cornerstone in
+training deep neural networks to alleviate the requirement
+of a large number of labeled samples, especially for the
+video domain. Existing works in video domains, use varying
+settings/backbones to show that one pretext is better than
+the other, but it’s challenging with no standard benchmark. We present a benchmark
+with similar constraints for all pretext tasks and study existing approaches. We conducted
+300+ experiments. In our study, we investigate different
+aspects such as: 1) pre-training dataset size, architecture
+backbones, task complexity from a training point of view, 2)
+multiple downstream tasks, such as finetuning and clip re-
+trieval performance, 3) knowledge distillation and 4) anal-
+ysis on robustness and out-of-distribution datasets for un-
+derstanding their generalization capability.We observed that architecture
+design matters in terms of learning capacity and robust-
+ness. Diversity in content is more important than instances
+per class. Our work will pave
+the way for future researchers for a better understanding of
+self-supervised pretext tasks in video representation learn-
+ing.
+  </div>
+   <br>
+  <br>
+<hr> <br>
+  <center>
+    <h2> RSPNet Performance </h2>
+    <center>Severity increasing from left to right.</center>
+  </center><br>
+  <table align=center width=800px>
+    <center>
+      <img src="./table2_2.jpg" width=350px />
+      </center>
+  
+    
+  </table>
+  <br><br> <hr><br>
+  <center>
+    <h2>Robustness analysis</h2>
+  </center>
+  <table align=center width=800px>
+    <center><img src="./images/teaser.png" width=600px /></center><br>
+    <center>A performance and robustness visualization of action recognition models on UCF-101P. y-axis: relative robustness (lower is better), x-axis: accuracy on clean videos,  P indicates pre-training, and the size of circle indicates FLOPs. Transformer based models, such as MViT, not only performs better than CNN counterparts but are more robust against distribution shifts. However, without pre-training its robustness drops significantly.</center>
+  </table>
+
+ 
+
+  <br>
+
+</body>
+
+</html>
