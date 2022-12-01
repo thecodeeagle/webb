@@ -1,0 +1,37 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> SqueezeNet</title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> SqueezeNet</span></center><br/>
+<br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  It uses different alteration to reduce
+  the number of parameters as compared to the 2D version
+  which employs depthwise convolution. Those three modifications are: 1) Change the shape of filters from 3x3 to 1x1,
+  2) Input channels to 3x3 filters is reduced, and, 3) to maintain large activation maps high resolution is maintained till
+  deep layers.
+<br>
+<br>
+More details can be found  <a href="https://arxiv.org/abs/1602.07360"> here. </a>
+<center>
+  <img src="./squeeze_arch2.JPG"  ><br>
+  Macroarchitectural view of SqueezeNet architecture. Left: SqueezeNet;
+Middle: SqueezeNet with simple bypass; Right: SqueezeNet with complex bypass 
+
+  </center>
+  <br>
+  <br>
+</div>
+</body>
+</html>

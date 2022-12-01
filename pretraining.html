@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> Pre-training Dataset </title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;">Experiments on Pre-training Dataset</span></center><br/>
+<br>
+
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  We first analyze the effects of pre-training data size variation. The network trains on four subsets of K400 dataset:
+  10,000 (10k), 30,000 (30k), 50,000 (50k) and 100,000 (100k). The number of videos per class are same. Smaller
+  pre-training dataset is a subset of bigger pre-training dataset size (i.e. 10k is a subset of 30k and so on).
+<br>
+We try to answer three questions regarding dependence on pre-train subset size:
+<ul>
+
+  <li> Behavior of different pretext tasks </li>
+  <li> How various architecture backbone performs? </li>
+  <li>Effect of training time for
+different architectures and across different pretext tasks </li>
+</ul>
+</div>
+<br>
+<br>
+<hr>
+<center>
+  <img src="./pre_fig1.JPG"/><br>
+  Figure 1: Left: dataset subset performance for three different architectures on RSPNet pretext task (x-axis: subset size). <br>Right:
+CKA map for RSPNet for 10k subset with R21D backbone
+  </center>
+  <br>
+  <br>
+<center>
+  <img src="./pre_table1.JPG"/><br>
+  Table 1: RSPNet with different subset size on ShuffleNet/R21D.
+  </center>
+  <br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  Looking into different architectures in Figure 1, there's 6-7% improvement in performance with
+increase in dataset size from 10k to 30k for all architectures. Increasing the subset size from 30k to 100k, shows minimal
+effect on R21D and ShuffleNet, whereas VideoSwin still improves by 12.8%. Looking into the effect of duration of training across different architectures for different subsets, the performance gain is minimal (less than 1.5%) after
+training for more than 100 epochs.
+<br>
+<br>
+<center>
+  <img src="./pre_table2.JPG"/><br>
+  Table 2:  Performance of different pretext tasks on R21D with 50k pre-training subset size
+  </center>
+<br>
+If we fix the subset size
+to 50k, apart from PRP, the average gain in performance is
+less than 2% for all other pretext tasks.
+</div>
+<hr>
+<center>
+<h3> Qualitative Observation: Centered Kernel Alignment (CKA) Maps </h3>
+</center>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+<center>
+  <br>
+  <img src="./pre_fig2.png" width=850px /><br>
+  Figure 2:  CKA maps for layer representations: 10k vs 10k, 30k vs 30k, 50k vs 50k, 100k vs 100k of R21D network on RSPNet pretext for
+all K-400 subsets (Left to right)
+  </center>
+  <center>
+    <br>
+    <img src="./pre_fig3.png" width=850px/><br>
+    Figure 3. CKA maps for layer representations: 50 epochs vs 50 epochs, 100 epochs vs 100 epochs, 150 epochs vs 150 epochs, 200 epochs
+vs 200 epochs of R21D network on RSPNet pretext for K-400 10k subset (Left to right)
+    </center>
+    <center>
+      <br>
+      <img src="./pre_fig4.png" width=850px/><br>
+      Figure 4. CKA maps for layer representations: 50 epochs vs 50 epochs, 100 epochs vs 100 epochs, 150 epochs vs 150 epochs, 200 epochs
+  vs 200 epochs of R21D network on RSPNet pretext for K-400 100k subset (Left to right).
+      </center>
+      <br>
+      <br>
+      <ul>
+      <li>We observe that with increase
+      in subset size used for training from 10k to 100k, block patterns become more distinct for both ShuffleNet and R21D
+      networks . The wider and clearer blocks corroborate with the saturation with increase in subset with minimal gain in
+      performance.
+    </li> <li>At 50 epochs, while comparing R21D CKA mapss on 10k, there's a multi-block structure against 100k
+      subset, where, the map shows a grid checkerboard structure.</li>
+        <li>
+      Block patterns relates to highly parameterization with respect to training dataset.With 10k, R21D (Fig.2) becomes
+relatively over-parameterized with respect to the training
+set. </li> <li>CKA maps depict how increasing the number of epochs
+keeping a given subset size fixed leads to development of distinct and darker block structures in the layer representations. Table 1 shows gain in performance reduces as the
+number of training runs increases from 150 to 200, indicating signs of saturation.</li>
+</ul>
+
+<br>
+<br>
+<center> <h3> Inferences </h3> </center>
+<ul>
+<li>As a general rule, performance do increase with
+increase in subset size. However, the scale of increase of
+subset size doesn’t reciprocate to gain in performance for
+each pretext task.</li><li> Pretext tasks does saturate at certain subset size. Beyond certain point, if we compare the time taken
+with more data, training becomes less efficient. </li> <li> CKA maps
+also shows the block structure patterns becomes more distinct as the improvement is small when we move to larger
+subset. For contrastive tasks, they reach their potential with
+shorter duration of training as well. </li>
+</ul>
+</div>
+</body>
+
+</html>

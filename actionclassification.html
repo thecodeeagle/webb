@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> Action Classification </title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> Action Classification </span></center><br/>
+<br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+For this task, the model is finetuned
+end-to-end on downstream datasets, which are UCF101 and
+HMDB51 in our case. In Table 1, we compare our best
+performing model with other previous state-of-the-art approaches.
+<br> <br>
+Observations: With only 30k videos compared
+to 240k videos used by other pretext tasks, we show that
+our model outperforms by good margin on UCF101 against
+single and multi-modal approaches. On HMDB51, we have
+a comparable performance. TCLR effectively takes in a
+larger clip duration at pre-training stage, whereas, other approaches use a bigger frame size or more number of frames.
+
+<br>
+<br>
+<center>
+  <img src="./sota_table_final.png"/><br>
+Table 1:  Comparison with previous approaches pre-trained on
+K400 full set. Ours (*best performing) is RSPNet pretrained on
+30k subset of K400.  † represents model with different backbone than R21D. *reproduced results.
+
+
+  </center>
+  <br>
+  <br>
+
+</div>

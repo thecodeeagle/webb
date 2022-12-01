@@ -1,0 +1,41 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> R21D </title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> R(2+1)D Network</span></center><br/>
+<br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  In this architecture, 3D convolution is broken down into 2D and 1D convolution. 2D convolution is in
+spatial dimension and 1D convolution is along the temporal
+dimension. <br>There are two benefits of this decomposition:
+<ol>
+<li> Increase in non-linearity as the number of layers have
+increased
+<li>Due to factorization of 3D kernels, the
+optimization becomes easier.
+</ol>
+<br>
+<br>
+More details can be found  <a href="https://arxiv.org/abs/1711.11248"> here. </a>
+<br>
+<br>
+<center>
+  <img src="./r21d_arch2.JPG"  ><br>
+ Residual Network Architecture.  R(2+1)D are ResNets with (2+1)D convolutions. For interpretability, residual connections are omitted.
+  </center>
+  <br>
+  <br>
+</div>
+</body>
+</html>

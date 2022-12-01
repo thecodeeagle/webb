@@ -1,0 +1,46 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> MobileNet</title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> MobileNet</span></center><br/>
+<br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  This network employs skip
+  connections like ResNet architecture in contrast to version
+  1. It helps the model in faster training and to build deeper
+  networks. There are also linear bottlenecks present in the
+  middle of layers. It helps in two ways as we reduce the
+  number of input channels:
+  <ol>
+    <li> With depthwise convolution,
+  the model size is reduced
+  <li> At inference time, memory
+  usage is low. V2 denotes version 2 of mobilenet and 1.0X
+  uses the original parameter settings.
+</ol>
+<br>
+<br>
+More details can be found  <a href="https://arxiv.org/abs/1704.04861"> here. </a>
+<center>
+  <img src="./mobile_arch.JPG"  ><br>
+  Left: Standard convolutional layer with batchnorm and
+ReLU. Right: Depthwise Separable convolutions with Depthwise
+and Pointwise layers followed by batchnorm and ReLU.
+
+  </center>
+  <br>
+  <br>
+</div>
+</body>
+</html>

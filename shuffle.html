@@ -1,0 +1,37 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> ShuffleNet</title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> ShuffleNet</span></center><br/>
+<br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+It utilize point-wise group
+convolutions and channel shuffling and has 3 different
+stages. Within a stage, the number of output channel remains same. As we proceed to successive stage, the spatiotemporal dimension is reduced by a factor of 2 and the
+number of channels are increased by a factor of 2. V1 denotes version 1 of ShuffleNet and 2.0X denotes the 2 times
+number of channels compared to original configuration.
+<br>
+<br>
+More details can be found  <a href="https://arxiv.org/abs/1707.01083"> here. </a>
+<center>
+  <img src="./shuffle_arch.JPG"  ><br>
+  ShuffleNet Units. a) bottleneck unit with depthwise convolution (DWConv); b) ShuffleNet unit with pointwise group
+ convolution (GConv) and channel shuffle; c) ShuffleNet unit with stride = 2.
+
+  </center>
+  <br>
+  <br>
+</div>
+</body>
+</html>

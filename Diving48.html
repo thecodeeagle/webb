@@ -1,0 +1,46 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> Diving-48 </title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> Diving-48 Dataset</span></center><br/>
+<br>
+
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+Diving48 is a fine-grained video dataset of competitive diving, consisting of ~18k trimmed video clips of 48 unambiguous dive sequences.
+This proves to be a challenging task for modern action recognition systems as dives may differ in three stages (takeoff, flight, entry) and thus require modeling of long-term temporal dynamics.
+Each of the 48 dive sequences are defined by a combination of takeoff (dive groups), movements in flight (somersaults and/or twists), and entry (dive positions). The prefix tree below summarizes all the dive classes present in the dataset.
+
+<center>
+  <img src="./diving_tree.svg" width=900px ><br>
+
+  </center>
+The video clips of Diving48 are obtained by segmenting online videos of major diving competitions. The ground-truth labels are transcribed from the information board before the start of each dive. The dataset is partitioned randomly into a training set of ~16k videos and a test set of ~2k.
+<br>
+<br>
+More details can be found  <a href="http://www.svcl.ucsd.edu/projects/resound/dataset.html"> here. </a>
+</div>
+<br>
+<hr> <br>
+<center>
+<h2> Sample Actions </h2>
+
+<center>
+  <img src="./diving_frames.png" width=900px ><br>
+
+  </center>
+  <br>
+  <hr> <br>
+</body>
+
+</html>
