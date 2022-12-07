@@ -1,0 +1,40 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> PRP </title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> Playback Rate Prediction (PRP) </span></center><br/>
+<br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  This has two branch,
+generative and discriminative. Discriminative focuses on
+the classifying the clip’s sampling rate, whereas, generative reconstructs the missing frame due to dilated sampling.
+Thus, the first one concentrates on temporal aspect and second one on spatial aspec
+<br>
+<br>
+More details can be found  <a href="https://arxiv.org/pdf/2003.02692.pdf"> here. </a>
+<br>
+<center>
+  <img src="./prp.JPG" width=550px><br>
+<b>  The overall framework of the proposed method. </b>(a) Data sampling using playback speeds. We sample frames
+according to the different playback speeds from the random initial points to form a clip and randomly shuffle them for 3D
+ConvNet. (b) Feature extraction with layer-dependable TGN. For efficient video learning, we train a 3D ConvNet using the
+proposed TGN instead of batch normalization. (c) Playback speed prediction. The extracted features are concatenated pairwise.
+The fully connected layers are used to encode the features, and the final layer uses these features to predict the playback speeds
+of the input clips. The dashed lines indicate that the network weights are shared with the straight lines.
+  </center>
+  <br>
+  <br>
+</div>
+</body>
+</html>

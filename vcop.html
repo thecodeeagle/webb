@@ -1,0 +1,41 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> VCOP </title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> Video Clip Order Prediction (VCOP) </span></center><br/>
+<br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  This approach learns the
+representation by predicting the permutation order. The network is fed N clips from a video and then it predicts the
+order from N! possible permutations.
+
+
+<br>
+<br>
+More details can be found  <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Xu_Self-Supervised_Spatiotemporal_Learning_via_Video_Clip_Order_Prediction_CVPR_2019_paper.pdf"> here. </a>
+<br>
+<center>
+  <img src="./vcop.JPG" width=650px><br>
+  <b> Overview of Clip Order Prediction Framework. </b>(a) Sample and Shuffle: Sample non-overlapping clips and shuffle them to a
+random order. (b) Feature Extraction: Use the 3D ConvNets to extract the feature of all clips. The 3D ConvNets is not pre-trained in any
+datasets. (c) Order Prediction: The extracted features are pairwise concatenated, and fully connected layers are placed on top to predict the
+actual order. The dashed lines mean that the corresponding weights are shared among clips. The framework can be trained end-to-end, and
+the 3D ConvNets can be used as a video feature extractor or pre-trained weights after training.
+
+  </center>
+  <br>
+  <br>
+</div>
+</body>
+</html>

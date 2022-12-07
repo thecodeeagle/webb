@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> CVRL </title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> Contrastive Video Representation Learning
+(CVRL) </span></center><br/>
+<br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  This technique applies temporally coherent strong
+  spatial augmentations to the input video. The contrastive
+  framework brings closer the clips from same video and
+  repels the clip from another video. With no labels attached,
+  the network learns to cluster the videos of same class but
+  with different visual content.
+
+<br>
+<br>
+More details can be found  <a href="https://arxiv.org/abs/2008.03800"> here. </a>
+<br>
+<center>
+  <img src="./cvrl.JPG" width=650px><br>
+<b>  Overview of the proposed spatiotemporal Contrastive Video Representation Learning (CVRL) framework. </b> From a raw video, a temporal interval is first sampled from a monotonically decreasing distribution. The temporal interval represents the number of
+frames between the start points of two clips, and two clips are sampled from a video according to this interval. Afterwards temporally consistent spatial augmentation is applied to each of the clips and feed them into a 3D backbone with an MLP head. The contrastive loss
+is used to train the network to attract the clips from the same video and repel the clips from different videos in the embedding space.
+
+  </center>
+  <br>
+  <br>
+</div>
+</body>
+</html>

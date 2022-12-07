@@ -1,0 +1,40 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> TDL </title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> Temporal Discriminative Learning (TDL)</span></center><br/>
+<br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  In contrast to CVRL, TDL works on temporal triplets. It looks
+into the temporal dimension of a video and targets them as
+unique instances. The anchor and positive belongs to same
+temporal interval and has a high degree of resemblance in
+visual content compared to the negative.
+
+<br>
+<br>
+More details can be found  <a href="https://arxiv.org/abs/2008.02129"> here. </a>
+<br>
+<center>
+  <img src="./tdl.JPG" width=750px><br>
+  Framework of the proposed Video-based Temporal-Discriminative Learning, which includes three steps in one iteration: Step 1) Generating temporal
+ triplets for each video in a training batch; Step 2) Self-supervised learning with Temporal-Discriminative Loss for temporal-discriminative feature extraction
+ with a 3D Backbone Network; Step 3) Updating Anchor Memory Bank with anchor features in each training batch. (Lines in red denote dissimilarity while
+ lines in blue denote similarity. This figure is better viewed in color.)
+  </center>
+  <br>
+  <br>
+</div>
+</body>
+</html>

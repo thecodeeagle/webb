@@ -1,0 +1,37 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title> RSPNet </title>
+
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+<body>
+  <br>
+
+  <center><span style="font-size: 44px; font-weight: bold;"> Relative Speed Perception Network (RSPNet) </span></center><br/>
+<br>
+<div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
+  This applies contrastive loss in both spatial and temporal domain.
+Clips are samples from a same video to analyze the relative
+speed between them. A triplet loss pulls the clips with same
+speed together and pushes clips with different speed apart
+in the embedding space. To learn spatial features, InfoNCEloss is applied. Clip from same video are positives
+whereas clips from different videos are negatives.
+<br>
+<br>
+More details can be found  <a href="https://arxiv.org/abs/2011.07949"> here. </a>
+<br>
+<center>
+  <img src="./rsp.png" width=750px><br>
+
+  </center>
+  <br>
+  <br>
+</div>
+</body>
+</html>
