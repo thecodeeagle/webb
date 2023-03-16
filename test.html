@@ -4,7 +4,7 @@
 <html>
 
 <head>
-  <title>Benchmarking SSL on Video Representation Learning and KD</title>
+  <title> Benchmarking Self-Supervised Video Representation Learning </title>
 
   <link rel="stylesheet" href="test.css">
 </head>
@@ -12,7 +12,7 @@
 <body>
   <br>
 
-  <center><span style="font-size: 44px; font-weight: bold;">Benchmarking SSL on Video Representation Learning and KD</span></center><br/>
+  <center><span style="font-size: 44px; font-weight: bold;"> Benchmarking Self-Supervised Video Representation Learning </span></center><br/>
 <br>
   <table align=center width=600px>
     <tr>
@@ -54,28 +54,20 @@
     <h2>Abstract</h2>
   </center>
   <div style="width: 750px; margin: 0 auto; text-align=center; text-align: justify; text-justify: inter-ideograph;">
-    Self-supervised learning has become the cornerstone in
-  training deep neural networks to alleviate the requirement
-  of a large number of labeled samples, especially for the
-  video domain. Existing works in video domain use varying
-  settings/backbones to show that one pretext is better than
-  the other, but it’s challenging with no standard benchmark.
-  We present a benchmark with similar constraints for all pretext tasks and compare existing approaches on the same
-  ground. In our study, with more than <b>400+ experiments </b>,
-  first we propose a new categorization for self-supervised
-  pretext tasks. Then, we perform an in-depth study on
-  different key factors including: <b>pre-training dataset size,
-  task complexity, effect of out-of-distribution and noisy
-  datasets,</b> which are important for self-supervised learning. Furthermore, we analyze the complementary nature
-  of features learned under such scenarios. More specifically,
-  we utilize knowledge distillation to study this aspect and
-  demonstrate how this can be used to train better models.
-  We observe that <b>models learn complementary knowledge</b>
-  under different conditions and we integrate this knowledge
-  in a model which shows <b>state-of-the-art performance</b> for
-  activity recognition on UCF-101 dataset. Our work will
-  pave the way for researchers for a better understanding of
-  self-supervised pretext tasks in video representation learning.
+    Self-supervised learning is an effective way for labelfree model pre-training, especially in the video domain
+where labeling is expensive. Existing self-supervised works
+in the video domain use varying experimental setups to
+demonstrate their effectiveness and comparison across approaches becomes challenging with no standard benchmark. In this work, we first provide a benchmark that
+enables a comparison of existing approaches on the same
+ground. Next, we study five different aspects of selfsupervised learning important for videos; 1) dataset size,
+2) complexity, 3) data distribution, 4) data noise, and, 5)
+feature analysis. To facilitate this study, we focus on seven
+different methods along with seven different network architectures and perform an extensive set of experiments on 5
+different datasets with an evaluation of two different downstream tasks. We present several interesting insights from
+this study which span across different properties of pretraining and target datasets, pretext-tasks, and model architectures among others. We further put some of these insights to
+the real test and propose an approach that requires a limited amount of training data and outperforms existing stateof-the-art approaches which use 10x pretraining data. We
+believe this work will pave the way for researchers to a better understanding of self-supervised pretext tasks in video
+representation learning.
 
   </div>
    <br>
